@@ -10,6 +10,7 @@
         <li><a href="index.php?filter=hats">Hats</a></li>
         <li><a href="index.php?filter=watches">Trackers&Watches</a></li>
         <li><a href="index.php">All Products</a></li>
+        <li><a href="admin/index.php">Dashboard</a></li>
     </ul>
 </nav>
 </header>

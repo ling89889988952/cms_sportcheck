@@ -9,3 +9,7 @@ require_once ADMIN_PATH.'/connect.php';
 require_once ADMIN_SCRIPT_PATH.'/read.php';
 require_once ADMIN_SCRIPT_PATH.'/login.php';
 require_once ADMIN_SCRIPT_PATH.'/location.php';
+require_once ADMIN_SCRIPT_PATH.'/product.php';
+require_once ADMIN_SCRIPT_PATH.'/user.php';
+
+

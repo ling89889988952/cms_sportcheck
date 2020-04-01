@@ -26,7 +26,7 @@ if(isset($_POST['login'])){
     <h2>Login</h2>
     <p>Please fill the form below!</p>
     <?php echo !empty($message)?$message:'';?>
-    <form action="admin_login.php" method="post">
+    <form action="index.php" method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" value="">
 

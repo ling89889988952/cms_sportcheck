@@ -17,6 +17,8 @@ if(isset($_GET['filter'])){
     $getProducts   = getAll($product_table);
 }
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -29,10 +31,16 @@ if(isset($_GET['filter'])){
     <title>Sport Check</title>
 </head>
 <body>
+    <h1>Welcome to Sport Check<h1>
     <?php include 'templates/header.php';?>
+    <form method="get" action="search.php">
+        <input type="text" name="keyword" placeholder="Search your product..." autocomplete="off">
+        <button type="submit" name="sumbit">Search!</button>
+    </form>
+
     <?php while($row = $getProducts->fetch(PDO::FETCH_ASSOC)):?>
     <div class="product-item">
-            <img src="images/<?php echo $row['product_cover']; ?>" alt="<?php echo $row['product_title'];?>"/>
+            <img src="images/<?php echo $row['product_cover']; ?>" alt="<?php echo $row['product_title'];?>" width="300px"/>
             <h2><?php echo $row['product_title'];?></h2>
             <h4>Price: <?php echo $row['product_price'];?></h4>
             <a href="detail.php?id=<?php echo $row['product_id'];?>">Get More</a>     

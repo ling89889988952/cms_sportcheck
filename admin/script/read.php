@@ -45,3 +45,32 @@ function getSingleProduct($tbl,$col,$id){
         return ' There was some problems';
 }
 }
+
+
+function searchProduct($keyword){
+    $pdo           = Database::getInstance()->getConnection();
+    $search_get    = " SELECT * FROM tbl_product WHERE product_title LIKE '%" . $keyword .  "%' OR product_price LIKE '%" . $keyword ."%' OR product_rate LIKE '%" . $keyword ."%' OR product_description LIKE '%" . $keyword ."%'";
+    $search_result = $pdo->query($search_get);
+    // var_dump($search_result);
+    // exit;
+    
+    if($search_result){
+        return $search_result;
+    }else{
+        return 'The product does not exist!';
+    }
+
+}
+
+
+function getColumn($tbl){
+    $pdo = Database::getInstance()->getConnection();
+    $queryColumn = ' SELECT COUNT(*) FROM '.$tbl;
+    $results = $pdo->query($queryColumn);
+
+    if($results){
+        return $results;
+    }else{
+        return 'There was a problem';
+    }
+}
