@@ -65,7 +65,7 @@ if(isset($_POST['submit'])){
 
             <label>Product Category:</label><br>
             <select name="cateList">
-            <option>Please select the product's category</option>
+            <option value="<?php echo $productinfo['category_id'];?>"><?php echo $productinfo['category_name'];?></option>
             <?php while($categories = $getCategory->fetch(PDO::FETCH_ASSOC)):?>
             <option value="<?php echo $categories['category_id'];?>"><?php echo $categories['category_name'];?></option>
             <?php endwhile;?>

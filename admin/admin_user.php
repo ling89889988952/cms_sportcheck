@@ -13,8 +13,6 @@ if(!$getUser){
     $message = 'Failed to get user list';
 }
 
-
-
 // Delete User
 if(isset($_GET['id'])){
     $user_id = $_GET['id'];

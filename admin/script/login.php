@@ -75,7 +75,7 @@ function login($username, $password){
 
     
 
-}else {
+    }else {
         $message ='User does not exist!';
     }
 
